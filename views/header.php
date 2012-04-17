@@ -29,10 +29,11 @@
   {
     $body_class = "page-".$uri_segments[0]."-".$uri_segments[1];
   };
-    
-  echo '<body id="page" class="'.$body_class.'" />';
-  
 ?>
+
+<body id="page" class="<?php echo $body_class; ?>" />
+
+	<?php echo $header_nav; ?>
 
   <!-- top bar-->
   <div id="top-bar">
@@ -46,16 +47,7 @@
 			<!-- searchform -->
 			<?php echo $search; ?>
 			<!-- / searchform -->
-			
-			<!-- user actions -->
-			<div id="loggedin_user_action" class="clearingfix">
-				<?php if($loggedin_username != FALSE){ ?>
-					<a href="<?php echo url::site().$loggedin_role;?>"><?php echo $loggedin_username; ?></a> <a href="<?php echo url::site();?>logout/front"><?php echo Kohana::lang('ui_admin.logout');?></a>
-				<?php } else { ?>
-					<a href="<?php echo url::site()."members/";?>"><?php echo Kohana::lang('ui_main.login'); ?></a>
-				<?php } ?>
-			</div>
-			<!-- / user actions -->
+
     </div>
   </div>
   <!-- / searchbox -->

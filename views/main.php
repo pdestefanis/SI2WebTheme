@@ -29,7 +29,7 @@ $(function(){
 
 		<!-- right column -->
 		<div id="report-map-filter-box" class="clearingfix">
-	    <a class="btn toggle" id="filter-menu-toggle" class="" href="#the-filters">Filter Reports By <span class="btn-icon ic-right">&raquo;</span></a>
+	    <a class="btn toggle" id="filter-menu-toggle" class="" href="#the-filters"><?php echo Kohana::lang('ui_main.filter_reports_by'); ?><span class="btn-icon ic-right">&raquo;</span></a>
 	    
 	    <!-- filters box -->
 	    <div id="the-filters" class="map-menu-box">
@@ -139,29 +139,6 @@ $(function(){
 			?>
 			
 			
-			<?php
-			if ($shares)
-			{
-				?>
-				<div id="other-deployments-box">
-				  <a class="btn toggle" id="other-deployments-menu-toggle" class="" href="#sharing_switch"><?php echo Kohana::lang('ui_main.other_ushahidi_instances');?> <span class="btn-icon ic-right">&raquo;</span></a>
-  				<!-- Layers (Other Ushahidi Layers) -->
-  				<ul id="sharing_switch" class="category-filters map-menu-box">
-  					<?php
-  					foreach ($shares as $share => $share_info)
-  					{
-  						$sharing_name = $share_info[0];
-  						$sharing_color = $share_info[1];
-  						echo '<li><a href="#" id="share_'. $share .'"><span class="swatch" style="background-color:#'.$sharing_color.'"></span>
-  						<span class="category-title">'.$sharing_name.'</span></a></li>';
-  					}
-  					?>
-  				</ul>
-  			</div>
-  			<!-- /Layers -->
-				<?php
-			}
-			?>
 			
 			
 			<!-- additional content -->
