@@ -38,6 +38,9 @@ Author Email: antikathistemi@gmail.com
   div.rapidxwpr,
   #top-bar { width:80%; }
 
+/* END Theme Settings
+/*---------------------------------*/
+
 /* general styles */
 h1 { }
 h2 { }
@@ -48,6 +51,8 @@ h5, h4 { }
 html { background:#728c99 url(../images/bg-body.jpg) repeat; }
 body#page { background:transparent url(../images/bg-header.jpg) 0 -9px repeat-x; }
 div#middle { background:transparent; position:relative; }
+
+#page header { display:none; } /* hide the global "nav" bar */
 
 .big-block {   }
 .page-main #main { padding:0px 10px; }
