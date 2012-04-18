@@ -33,7 +33,7 @@
 
 <body id="page" class="<?php echo $body_class; ?>" />
 
-	<?php echo $header_nav; ?>
+
 
   <!-- top bar-->
   <div id="top-bar">
@@ -47,7 +47,9 @@
 			<!-- searchform -->
 			<?php echo $search; ?>
 			<!-- / searchform -->
-
+      
+      <?php echo $header_nav; ?>
+      
     </div>
   </div>
   <!-- / searchbox -->

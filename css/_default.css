@@ -36,7 +36,7 @@ Author Email: antikathistemi@gmail.com
     
   /* Site Width */
   div.rapidxwpr,
-  #top-bar { width:80%; }
+  #top-bar { width:90%; }
 
 /* END Theme Settings
 /*---------------------------------*/
@@ -52,17 +52,32 @@ html { background:#728c99 url(../images/bg-body.jpg) repeat; }
 body#page { background:transparent url(../images/bg-header.jpg) 0 -9px repeat-x; }
 div#middle { background:transparent; position:relative; }
 
-#page header { display:none; } /* hide the global "nav" bar */
+/* Header Nav Tweaks */
+body#page header { float:left; width:105px; background:transparent; border:0; 
+  -moz-box-shadow: 1px 1px 1px transparent;
+  -webkit-box-shadow: 1px 1px 1px transparent;
+  box-shadow: 1px 1px 1px transparent;
+   }
+body#page header hgroup, #header_nav_left { display:none; }
+header .header_nav_user { float:none; }
+header ul#header_nav_right {}
+header ul#header_nav_right li { padding-top:5px; }
+body#page header nav li ul.header_nav_dropdown { border:0; }
+body#page header nav li.header_nav_user a { width:90px; width:center; }
+
+
 
 .big-block {   }
 .page-main #main { padding:0px 10px; }
 
+body#page header nav li ul.header_nav_dropdown { z-index:1200; right:0px; }
+
 /* top-bar */
 #top-bar {
-  overflow:auto;
+  overflow:visible;
   position: relative;
   margin:0 auto;
-  z-index:1000;
+  z-index:1200;
 }
 div#searchbox {
   position: static;
@@ -108,7 +123,7 @@ div.search-form input.searchbtn {
 }
 
 /* header */
-div#header { height:80px; margin:0 0 25px; top:-30px; }
+div#header { height:80px; margin:0 0 25px; }
 
 /* logo box */
 div#logo {
@@ -119,10 +134,10 @@ div#logo {
   position:relative;
 }
 div#logo h1 { display:none; }
-div#logo span { position:absolute; margin-left:13px; bottom:-20px;  }
+div#logo span { position:absolute; margin-left:275px; top:50%; font-weight:bold; font-size:18px; }
 
 /* submit report button */
-div.submit-incident { margin:0; top:70%; }
+div.submit-incident { margin:0; top:70%; display:none; }
 div.submit-incident a, .btn_submit {
   text-shadow: 1px 1px 0 #424242;
   -moz-border-radius: 3px;
@@ -147,7 +162,7 @@ div#mainmenu ul li a { padding:3px 5px; -moz-border-radius: 3px; -webkit-border-
 div#mainmenu ul li a:hover, div#mainmenu a.active { background:#fff; color:#a24e3b; }
 
   #menu-left-cap,
-  #menu-right-cap { position:absolute; z-index:10000; width:10px; height:14px; background:transparent url(../images/bg_main-menu-caps.png); bottom:-14px; }
+  #menu-right-cap { position:absolute; z-index:1100; width:10px; height:14px; background:transparent url(../images/bg_main-menu-caps.png); bottom:-14px; }
   #menu-left-cap { left:0px; background-position:bottom;}
   #menu-right-cap { right:0px; }
 /* filter box */
